@@ -10,12 +10,17 @@ for(var i = 0; i < allElements.length; i++){
 	console.log(allElements[i].nodeName.toString());
 	if (allElements[i].nodeName.toString() == "video"){
 		console.log("video here");
-		console.log(allElements[i].currentSrc);
+		console.log(allElements[i].src);
 	}
 } 
 
 var vids = document.getElementsByTagName('video');
 
+function onLoaded(event) {
+  console.log(event.target.src);
+}
+
 for(var i = 0;i<vids.length;i++){
-	console.log(vids.item(i).currentSrc);
+	console.log(vids.item(i).src);
+  vids.item(i).addEventListener('loadeddata', onLoaded);
 }
