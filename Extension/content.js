@@ -1,27 +1,34 @@
+var time = 0;
+
 function repeatCheck(){
-	var allClasses = [];
-	var allElements = document.querySelectorAll("*");
-
-	for(var i = 0; i < allElements.length; i++){
-		if (allElements[i].nodeName.toString() == "video"){
-			console.log(allElements[i].nodeName.toString());
-			console.log("video here");
-			console.log(allElements[i].src);
-		}
-	} 
-
+	var mycanvas = document.createElement("CANVAS");
 	var vids = document.getElementsByTagName('video');
 
-	function onLoaded(event) {
+	for(var i = 0;i<vids.length;i++){
+  		vids.item(i).addEventListener('loadeddata', onLoaded);
+		vids.item(i).currentTime = window.time;
+		window.time = window.time + 1;
+			
+		var video = vids.item(i);
+		var thecanvas = mycanvas;
+
+		video.addEventListener('pause', function(){
+			draw(video, thecanvas);
+		}, false);
+		
+	}
+
+	function draw(video, thecanvas){
+		var context = thecanvas.getContext('2d');
+		context.drawImage(video, 0, 0, thecanvas.width, thecanvas.height);
+	}
+
+	function onLoaded(event){
 		console.log(event.target.src);
 	}
 
-	for(var i = 0;i<vids.length;i++){
-		console.log(vids.item(i).src);
-  		vids.item(i).addEventListener('loadeddata', onLoaded);
-	}
-	console.log("Chrome Extension <3");
-	setTimeout(repeatCheck, 5000);
+
+	setTimeout(repeatCheck, 1000);
 
 }
 
