@@ -21,6 +21,12 @@ function repeatCheck(){
 	function draw(video, thecanvas){
 		var context = thecanvas.getContext('2d');
 		context.drawImage(video, 0, 0, thecanvas.width, thecanvas.height);
+		var ctx = thecanvas.getContext('2d');
+		
+		ctx.fillRect(50, 50, 50, 50);
+		
+		var img = new Image();
+		img.src = thecanvas.toDataURL();
 	}
 
 	function onLoaded(event){
