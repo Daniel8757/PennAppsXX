@@ -1,4 +1,4 @@
-var time = 0;
+var picArray[];
 
 function repeatCheck(){
 	var mycanvas = document.createElement("CANVAS");
@@ -6,8 +6,6 @@ function repeatCheck(){
 
 	for(var i = 0;i<vids.length;i++){
   		vids.item(i).addEventListener('loadeddata', onLoaded);
-		vids.item(i).currentTime = window.time;
-		window.time = window.time + 1;
 			
 		var video = vids.item(i);
 		var thecanvas = mycanvas;
@@ -27,7 +25,11 @@ function repeatCheck(){
 		
 		var img = new Image();
 		img.src = thecanvas.toDataURL();
+
+		window.picArray.push(img.src);
+		
 	}
+	
 
 	function onLoaded(event){
 		console.log(event.target.src);
