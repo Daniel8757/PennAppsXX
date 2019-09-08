@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        
+		<title>Don't be Fake</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}" />
+       
+		<noscript><link rel="stylesheet" href="/Users/aarati/Desktop/PennApps/templates/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Don't Be Fake</a></h1><br><br>
+
+								
+	<form  class="form-inline" id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+<form method="post" action="#">
+
+								<div class="fields">
+									<div class="field">
+										<p style="text-align: center">Enter Video URL to Scan For Deepfake</p>
+										<input type="text" name="text" id="name" />
+									</div>
+									<br>
+								<ul class="actions">
+									<li><input type="submit" value="Submit" /></li>
+								</ul>
+</form>	
+</form>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">More Info</a>
+							</footer>
+						</div>
+					</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>The Problems with <strong>DeepFakes</strong></h2>
+						<p>
+							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
+							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
+						</p>
+					</header>
+				</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy George, Aarati, Dan, Sofiya All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+
+						</div>
+
+
+        <!-- Scripts -->
+        
+			<script src= "{{ url_for('static', filename='assets/js/jquery.min.js') }}" ></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
