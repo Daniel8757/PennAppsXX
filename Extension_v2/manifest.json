@@ -3,7 +3,7 @@
   "description": "Scans Videos for Deep Fakes",
   "version": "1.0",
   "manifest_version": 2,
-  "permissions": ["alarms", "notifications", "storage"],
+  "permissions": ["alarms", "notifications", "storage", "activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -15,5 +15,13 @@
   "icons": {
     "16": "icon.png",
     "128": "icon_128.png"
-  }
+  },
+  "content_scripts":[
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
 }
