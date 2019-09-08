@@ -1,7 +1,39 @@
 data_full = []
-for i in range(2,12):
+for i in range(0,10): #was 2-12
     data_full.append(i)
 
+
+#getting frames from json (what is in the folder at this point)
+
+import os
+
+
+i = 0
+directory = "/Users/sofielysenko/Desktop/INPUT/"
+
+
+for file in os.listdir(directory):
+    filename = os.fsdecode(file)
+    print(filename)
+    
+    if filename.endswith(".json"):
+        thePath = os.path.join(directory, filename)
+        with open(thePath, 'r') as content_file:
+            content = content_file.read()
+    
+    
+        from base64 import b64decode
+        data_uri = content
+        header, encoded = data_uri.split(",", 1)
+        data = b64decode(encoded)
+        
+        result = "/Users/sofielysenko/Desktop/fake_obama_frames/" + str(i) + ".jpg"
+        with open(result, "wb") as f:
+            f.write(data)
+        i+=1
+    
+    if i == 10:
+        break
 
 #########Normalizing frames
 # import the necessary packages
