@@ -10,10 +10,7 @@ function repeatCheck(){
 			
 		var video = vids.item(i);
 		var thecanvas = mycanvas;
-
-		video.addEventListener('pause', function(){
-			draw(video, thecanvas);
-		}, false);
+		draw(video, thecanvas);
 		
 	}
 
@@ -39,7 +36,6 @@ function repeatCheck(){
     		linkElement.setAttribute('download', exportFileDefaultName);
    		linkElement.click();
 		window.picArray = [];
-		
 	}
 	
 
