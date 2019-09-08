@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DeFake</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}"/>
+		<noscript><link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+
+                                   
+                                   
+                                 
+                                    
+                                    {% if response == "Fake" %} 
+								<h1><a href="#" id="logo">This Video most likely is a DeepFake</a></h1><br><br>
+                                {% endif %} 
+
+                                {% if response != "Fake" %} 
+								<h1><a href="#" id="logo">This Video most likely is not a DeepFake</a></h1><br><br>
+                                {% endif %} 
+							</header>
+							<footer>
+                                    
+								<a href="#banner" class="button circled scrolly">More Info</a>
+							</footer>
+						</div>
+					</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+                           
+						<h2>The Problems with <strong>DeepFakes</strong></h2>
+						<p>
+							The upcoming election season is predicted to be drowned out by mass influx of fake news. Deepfakes are a new method to impersonate famous figures saying fictional things, and could be particularly influential in the outcome of this and future elections. With international misinformation becoming more common, we wanted to develop a level of protection and reality for users.
+						</p>
+					</header>
+				</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy George, Aarati, Dan, Sofiya All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+
+						</div>
+
+
+        <!-- Scripts -->
+        
+        <script src= "{{ url_for('static', filename='assets/js/jquery.min.js') }}" ></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src= "{{ url_for('static', filename='assets/js/util.js') }}"></script>
+            <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+
+	</body>
+</html>
