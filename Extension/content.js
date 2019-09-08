@@ -1,4 +1,5 @@
-var picArray[];
+var picArray = [];
+var number = 0;
 
 function repeatCheck(){
 	var mycanvas = document.createElement("CANVAS");
@@ -27,6 +28,19 @@ function repeatCheck(){
 		img.src = thecanvas.toDataURL();
 
 		window.picArray.push(img.src);
+
+		var myJSON = JSON.stringify(img.src);
+
+		let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(myJSON);
+
+    		let exportFileDefaultName = window.number.toString();
+		window.number = window.number+1;
+
+   		let linkElement = document.createElement('a');
+   		linkElement.setAttribute('href', dataUri);
+    		linkElement.setAttribute('download', exportFileDefaultName);
+   		linkElement.click();
+		window.picArray = [];
 		
 	}
 	
