@@ -59,6 +59,9 @@ function loadDoc() {
 	request.onload = () => console.log(request.response);
 	request.open("GET", "http://127.0.0.1:3000?file=yourfile");
 	request.send();
+	if(request.response == "False"){
+		alert("I am an alert box!");
+	}
 }
 	
 loadDoc();
