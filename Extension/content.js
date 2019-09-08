@@ -46,7 +46,7 @@ function repeatCheck(){
 	}
 
 	
-	if(window.counter<10){
+	if(window.counter<=10){
 		setTimeout(repeatCheck, 1000);
 	}
 
