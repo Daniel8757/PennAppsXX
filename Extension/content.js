@@ -22,8 +22,6 @@ function repeatCheck(){
 		context.drawImage(video, 0, 0, thecanvas.width, thecanvas.height);
 		var ctx = thecanvas.getContext('2d');
 		
-		ctx.fillRect(50, 50, 50, 50);
-		
 		var img = new Image();
 		img.src = thecanvas.toDataURL();
 
@@ -48,7 +46,6 @@ function repeatCheck(){
 	function onLoaded(event){
 		console.log(event.target.src);
 	}
-
 
 	setTimeout(repeatCheck, 1000);
 
