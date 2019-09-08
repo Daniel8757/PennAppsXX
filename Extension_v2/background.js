@@ -7,12 +7,9 @@ chrome.alarms.onAlarm.addListener(function() {
   chrome.browserAction.setBadgeText({text: ''});
   chrome.notifications.create({
       type:     'basic',
-      iconUrl:  'stay_hydrated.png',
-      title:    'Video Analysis',
-      message:  'This Video May be A DeepFake',
-      buttons: [
-        {title: 'Analysis'}
-      ],
+      iconUrl:  'icon.png',
+      title:    'Video Analysis Report',
+      message:  'This Video May be a Deepfake',
       priority: 0});
 });
 
