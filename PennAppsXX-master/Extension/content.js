@@ -2,6 +2,7 @@ var picArray = [];
 var number = 0;
 var counter = 0;
 
+
 function repeatCheck(){
 	window.counter = window.counter+1;
 	var mycanvas = document.createElement("CANVAS");
@@ -13,7 +14,6 @@ function repeatCheck(){
 		var video = vids.item(i);
 		var thecanvas = mycanvas;
 		draw(video, thecanvas);
-		
 	}
 
 	function draw(video, thecanvas){
@@ -45,7 +45,17 @@ function repeatCheck(){
 		console.log(event.target.src);
 	}
 
+
+	function loadDoc() {
+  		var request = new XMLHttpRequest();
+		request.onload = () => console.log(request.response);
+		request.open("GET", "http://127.0.0.1:3000?file=yourfile");
+		request.send();
+	}
 	
+	loadDoc();
+
+
 	if(window.counter<=10){
 		setTimeout(repeatCheck, 1000);
 	}
