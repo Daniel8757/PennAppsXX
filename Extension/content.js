@@ -1,7 +1,9 @@
 var picArray = [];
 var number = 0;
+var counter = 0;
 
 function repeatCheck(){
+	window.counter = window.counter+1;
 	var mycanvas = document.createElement("CANVAS");
 	var vids = document.getElementsByTagName('video');
 
@@ -43,7 +45,10 @@ function repeatCheck(){
 		console.log(event.target.src);
 	}
 
-	setTimeout(repeatCheck, 1000);
+	
+	if(window.counter<10){
+		setTimeout(repeatCheck, 1000);
+	}
 
 }
 
