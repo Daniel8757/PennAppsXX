@@ -46,16 +46,6 @@ function repeatCheck(){
 	}
 
 
-	function loadDoc() {
-  		var request = new XMLHttpRequest();
-		request.onload = () => console.log(request.response);
-		request.open("GET", "http://127.0.0.1:3000?file=yourfile");
-		request.send();
-	}
-	
-	loadDoc();
-
-
 	if(window.counter<=10){
 		setTimeout(repeatCheck, 1000);
 	}
@@ -63,3 +53,12 @@ function repeatCheck(){
 }
 
 repeatCheck();
+
+function loadDoc() {
+  	var request = new XMLHttpRequest();
+	request.onload = () => console.log(request.response);
+	request.open("GET", "http://127.0.0.1:3000?file=yourfile");
+	request.send();
+}
+	
+loadDoc();
