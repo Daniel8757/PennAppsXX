@@ -1,9 +1,14 @@
 
+
 import os
 import youtube_dl
 from flask import Flask, redirect, render_template, send_from_directory, request
 import os
 import cv2
+
+#####
+#Flask App
+#####
 
 app = Flask(__name__)
 
@@ -25,7 +30,15 @@ def upload():
     
     
     return render_template('return.html', response=result)
+#######################
+"""
+Deep Fake Detector 
+Author: Sofiya Lysenko
+License: CC BY-NC-SA
+Please feel free to use and modify all code below, but keep the above information. Thank you!
 
+"""
+#######################
 def extractFrames(path):
     #Extract frame every second
     print(cv2.__version__)
